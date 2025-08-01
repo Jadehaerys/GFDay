@@ -332,77 +332,42 @@ button.open {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
-  .banner {
-    font-size: 1.6rem;
-  }
-
-  .message {
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  #photoStrip {
-    max-height: 350px;
-  }
-
-  .photo img {
-    max-height: 200px;
-  }
-
-  .camera {
-    width: 85%;
-  }
-
-  #musicToggle {
-    bottom: 15px;
-    right: 15px;
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .banner {
-    font-size: 1.3rem;
-    padding: 10px;
-  }
-
-  .message {
-    font-size: 0.95rem;
-    padding: 12px;
-  }
-
-  #photoStrip {
-    max-height: 280px;
-    padding: 10px;
-  }
-
-  .photo img {
-    max-height: 160px;
-  }
-
-  .camera {
-    width: 90%;
+  .welcome-card {
+    padding: 30px 20px;
+    border-radius: 20px;
   }
 
   .welcome-title {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 
   .welcome-subtext {
     font-size: 1rem;
   }
 
+  .welcome-image {
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+
   .start-btn {
     font-size: 1rem;
     padding: 10px 20px;
   }
+}
 
-  #musicToggle {
-    bottom: 10px;
-    right: 10px;
-    padding: 8px 14px;
-    font-size: 12px;
+@media (max-width: 480px) {
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .start-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .welcome-image {
+    width: 160px;
   }
 }
 
@@ -417,3 +382,199 @@ button.open {
   animation: fadeOutSlow 1.2s ease forwards;
 }
 
+@media (max-width: 768px) {
+  .screen {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .card-img {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .message {
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .camera {
+    max-width: 220px;
+  }
+
+  #photoStrip {
+    max-width: 280px;
+    padding: 15px 10px;
+    gap: 10px;
+  }
+
+  .photo img {
+    max-height: 180px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive Adjustments for Small Screens (Phones) */
+@media (max-width: 480px) {
+  .screen {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-img {
+    max-width: 120px;
+  }
+
+  .banner {
+    font-size: 1.5rem;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .camera {
+    max-width: 180px;
+  }
+
+  #photoStrip {
+    max-width: 250px;
+    padding: 12px 10px;
+  }
+
+  .photo img {
+    max-height: 150px;
+  }
+
+  .start-btn,
+  #musicToggle,
+  button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}
+
+/* Ultra-Small Screens (Older/Compact Phones) */
+@media (max-width: 360px) {
+  .banner {
+    font-size: 1.3rem;
+  }
+
+  .welcome-title {
+    font-size: 1.3rem;
+  }
+
+  .welcome-subtext {
+    font-size: 0.9rem;
+  }
+
+  .message {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .photo img {
+    max-height: 120px;
+  }
+}
+
+/* 🌸 Welcome Screen Layout */
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe0eb, #ffc1cc);
+  padding: 40px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.welcome-image {
+  max-width: 180px;
+  height: auto;
+  animation: pop 1.5s ease;
+}
+
+.welcome-title {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2rem;
+  color: #d63384;
+  margin: 20px 0 10px;
+}
+
+.welcome-subtext {
+  font-size: 1.1rem;
+  color: #5e0e35;
+  margin-bottom: auto;
+}
+
+/* Buttons at the bottom */
+.welcome-buttons {
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.start-btn {
+  background-color: #ff99cc;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Cute Pop Animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive Envelope Layout */
+@media screen and (max-width: 480px) {
+  .welcome-image {
+    max-width: 140px;
+  }
+
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-subtext {
+    font-size: 1rem;
+  }
+
+  .start-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
