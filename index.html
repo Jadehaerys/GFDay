@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy National Girlfriend's Day!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 🌸 WELCOME SCREEN -->
+    <div class="welcome-screen">
+      <img
+        src="images/Envelope-PNG-File-Cute-Clip-Art-Graphics-21165334-1.png"
+        alt="Welcome"
+        class="welcome-image"
+      />
+      <h1 class="welcome-title">Happy Girlfriend’s Day!</h1>
+      <button class="start-btn" onclick="startExperience()">
+        Click to Begin 💕
+      </button>
+    </div>
+
+    <!-- 🌸 MAIN CONTENT -->
+    <div class="container" id="main-content" style="display: none">
+      <div class="banner">💖 Happy National Girlfriend's Day! 💖</div>
+
+      <div class="envelope-container">
+        <div class="click-here">Click Here 💌</div>
+        <img
+          src="images/Envelope-PNG-File-Cute-Clip-Art-Graphics-21165334-1.png"
+          alt="Envelope"
+          class="envelope"
+          onclick="openLetter()"
+        />
+      </div>
+
+      <section class="content hidden" id="loveLetter">
+        <img src="images/May1.jpg" alt="Picture of Us" class="couple-photo" />
+        <p class="message">
+          To the love of my life 💕<br />
+          Every moment with you is a cherished memory. Today is a reminder of
+          how lucky I am to have you. I love you more every single day. You make
+          my world brighter, funnier, and way more beautiful. <br /><br />
+          You are the sunshine to my cloudy days, the laugh to my silence, and
+          the love of my life. I’m so lucky to call you mine. 💕<br />
+          Happy National Girlfriend's Day! 💗
+        </p>
+      </section>
+
+      <div class="camera-section">
+        <div
+          class="camera-wrapper"
+          onclick="printPhotoStrip()"
+          title="Click the camera!"
+        >
+          <img
+            src="images/Pink Green Camera Day Social Media Graphic.svg"
+            alt="Camera"
+            class="camera hoverable"
+          />
+          <div id="slot"></div>
+        </div>
+      </div>
+
+      <button id="musicToggle">Pause Music</button>
+      <audio id="bgMusic" loop>
+        <source
+          src="bgMUSIC/I Like You So Much, You’ll Know It (我多喜欢你，你会知道) - OST A Love So Beautiful (English Cover by Tereza) - Tereza Fahlevi.mp3"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
